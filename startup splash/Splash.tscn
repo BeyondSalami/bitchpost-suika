@@ -1,0 +1,143 @@
+[gd_scene load_steps=13 format=3 uid="uid://cn4pjitbf3oh8"]
+
+[ext_resource type="Texture2D" uid="uid://cwsr3gco0pdhh" path="res://startup splash/babyesalami.png" id="1_4skrr"]
+[ext_resource type="Script" path="res://startup splash/startup.gd" id="1_5wlle"]
+[ext_resource type="Texture2D" uid="uid://cdpqguja5p7he" path="res://startup splash/Godot_icon.svg.png" id="2_jkruy"]
+
+[sub_resource type="Animation" id="Animation_fbf1q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_mf8gq"]
+resource_name = "logo_spin"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.307178, -5.92539]
+}
+
+[sub_resource type="Animation" id="Animation_udm3p"]
+resource_name = "spin_start"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.307178]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c3ob5"]
+_data = {
+"RESET": SubResource("Animation_fbf1q"),
+"logo_spin": SubResource("Animation_mf8gq"),
+"spin_start": SubResource("Animation_udm3p")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yog8x"]
+animation = &"logo_spin"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ptqgf"]
+animation = &"spin_start"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qlbfd"]
+reset = false
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tbek8"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jx688"]
+states/Start/position = Vector2(200, 101)
+states/logo_spin/node = SubResource("AnimationNodeAnimation_yog8x")
+states/logo_spin/position = Vector2(531, 103)
+states/spin_start/node = SubResource("AnimationNodeAnimation_ptqgf")
+states/spin_start/position = Vector2(363, 103)
+transitions = ["Start", "spin_start", SubResource("AnimationNodeStateMachineTransition_qlbfd"), "spin_start", "logo_spin", SubResource("AnimationNodeStateMachineTransition_tbek8")]
+
+[node name="Splash" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5wlle")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.211765, 0.223529, 0.247059, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.456597
+anchor_top = 0.208333
+anchor_right = 0.543403
+anchor_bottom = 0.362654
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(47.765, 49.465)
+texture = ExtResource("1_4skrr")
+metadata/_edit_use_anchors_ = true
+
+[node name="godort" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -1.0
+offset_right = 124.0
+offset_bottom = 247.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(19.885, 20.21)
+texture = ExtResource("2_jkruy")
+expand_mode = 1
+
+[node name="animplaywer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_c3ob5")
+}
+autoplay = "spin_start"
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_c3ob5")
+}
+tree_root = SubResource("AnimationNodeStateMachine_jx688")
+anim_player = NodePath("../animplaywer")

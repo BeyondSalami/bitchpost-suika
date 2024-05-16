@@ -13,11 +13,9 @@ config_version=5
 config/name="lil-bitch-suika"
 config/description="combine fruits for infinite fortune"
 config/version="0.0.5"
-run/main_scene="res://scenes/MainMenu.tscn"
+run/main_scene="res://startup splash/Splash.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-boot_splash/image="res://sprites/companylogo.png"
-boot_splash/fullsize=false
-boot_splash/use_filter=false
+boot_splash/show_image=false
 config/icon="res://sprites/program.png"
 
 [autoload]
@@ -27,6 +25,7 @@ SaveManager="*res://Scripts/save_manager.gd"
 SignalBus="*res://Scripts/signal_bus.gd"
 SettingsContainer="*res://Scripts/Settings_Data_Container.gd"
 SettingsSignalBus="*res://Scripts/Settings_Signal_Bus.gd"
+OnlineGameManager="*res://Scripts/online_game_manager.gd"
 
 [display]
 

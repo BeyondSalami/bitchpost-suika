@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7yasntojr5ec"]
+
+[ext_resource type="Script" path="res://Scripts/multiplayer_root.gd" id="1_kaw4e"]
+[ext_resource type="PackedScene" uid="uid://ctgdboxupq7v" path="res://scenes/Online-Test/In-Game/Player/Player_Board.tscn" id="2_qdt4e"]
+
+[sub_resource type="Gradient" id="Gradient_d3a4o"]
+offsets = PackedFloat32Array(0, 0.493976, 1)
+colors = PackedColorArray(5.77569e-07, 0.413716, 0.47781, 1, 0.406475, 0.768776, 0.780325, 1, 0.494353, 0.792253, 0.957671, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kv567"]
+gradient = SubResource("Gradient_d3a4o")
+
+[node name="Online_Root" type="Node2D"]
+script = ExtResource("1_kaw4e")
+PlayerScene = ExtResource("2_qdt4e")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575.836, 327.436)
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(579, 326)
+scale = Vector2(4.55176, 660)
+texture = SubResource("GradientTexture1D_kv567")
+
+[node name="spawn0" type="Node2D" parent="." groups=["PlayerSpawnPoint"]]
+
+[node name="spawn1" type="Node2D" parent="." groups=["PlayerSpawnPoint"]]
+position = Vector2(576, 1)

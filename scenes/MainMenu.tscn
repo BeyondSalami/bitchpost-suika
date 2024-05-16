@@ -208,12 +208,12 @@ text = "Play"
 script = ExtResource("1_8yp6e")
 metadata/_edit_use_anchors_ = true
 
-[node name="Play2" type="Button" parent="."]
+[node name="Multiplayer" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.580729
+anchor_left = 0.499132
 anchor_top = 0.300926
-anchor_right = 0.743056
+anchor_right = 0.661459
 anchor_bottom = 0.447531
 offset_top = -1.52588e-05
 grow_horizontal = 2
@@ -221,6 +221,22 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 29
 text = "Multiplayer
 (local only)"
+script = ExtResource("3_fn006")
+metadata/_edit_use_anchors_ = true
+
+[node name="Online" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.673611
+anchor_top = 0.300926
+anchor_right = 0.835938
+anchor_bottom = 0.447531
+offset_top = -1.52588e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 29
+text = "Multiplayer
+(online)"
 script = ExtResource("3_fn006")
 metadata/_edit_use_anchors_ = true
 
@@ -342,7 +358,8 @@ bus = &"Music"
 visible = false
 
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
-[connection signal="pressed" from="Play2" to="Play2" method="_on_pressed"]
+[connection signal="pressed" from="Multiplayer" to="Multiplayer" method="_on_pressed"]
+[connection signal="pressed" from="Online" to="Online" method="_on_pressed"]
 [connection signal="pressed" from="Load" to="Load" method="_on_pressed"]
 [connection signal="pressed" from="Save" to="Save" method="_on_pressed"]
 [connection signal="pressed" from="OptionsButton" to="OptionsButton" method="_on_pressed"]

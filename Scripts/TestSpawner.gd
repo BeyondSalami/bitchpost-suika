@@ -12,7 +12,7 @@ var can_spawn = true
 var rng = RandomNumberGenerator.new()
 @onready var can_die = false
 var first_spawn = true
-var fruit_pick
+@export var fruit_pick: float
 
 func _ready():
 	fruit_pick = rng.randfn(1.5,4)
@@ -20,6 +20,7 @@ func _ready():
 func _process(_delta):
 	spawn_location = get_node(spawn_location_path).global_position
 
+@rpc("any_peer","call_local")
 func drop_ball():
 	if can_spawn == true:
 		can_die = false

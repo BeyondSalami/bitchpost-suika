@@ -31,15 +31,17 @@ var highest_fruit_seen = 1
 var hider
 var three_combine: bool
 #singleplayer/multiplayer variable
-var singleplayer := true
+var singleplayer : bool
 
 @export var score: int
 @export var high_score: int
 @export var over_menu_pos: Node2D
 
 func get_combine():
-	three_combine = SettingsContainer.get_classic_3_combine_state()
-	
+	if singleplayer == true:
+		three_combine = SettingsContainer.get_classic_3_combine_state()
+	else:
+		three_combine = true
 
 func _process(_delta):
 	if cherry_pos_array.size() == 2:
@@ -392,12 +394,14 @@ func _unhandled_input(_event):
 	if Input.is_physical_key_pressed(KEY_X):
 		clear_arrays()
 
+@rpc("any_peer","call_local")
 func leave_menu():
-	var instance = win_menu.instantiate()
-	instance.position.x = over_menu_pos.position.x + 210
-	instance.position.y = over_menu_pos.position.y
-	add_child(instance)
-	if NewFruitManager.singleplayer == false:
+	if singleplayer == true:
+		var instance = win_menu.instantiate()
+		instance.position.x = over_menu_pos.position.x + 210
+		instance.position.y = over_menu_pos.position.y
+		add_child(instance)
+	else:
 		var root_Game = $"../.."
 		root_Game.Send_Game_Over()
 

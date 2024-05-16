@@ -1,0 +1,14 @@
+FIND A WAY TO SYNC NEW NODES AND/OR THEIR POSITIONS, CURRENTLY HAS DESYNCS
+
+WORK OUT THE WIN SCREENS, CURRENTLY CRASHING DUE TO NOT HAVING POSITIONS?? IDK
+(ALSO, when i DID get them to work the scenes werent being changed right.
+i think i need to queue free all of the current scenes. of just add an if 
+statement that goes back to the lobby instead of home if its online or not)
+
+ADD A NAME THING, I THINK THE WAY THE TUT HAS IT SET UP IT OVERWRITES IT, 
+MAKE IT NOT DO THAT AND THEN MAKE IT DISPLAY SO PEOPLE KNOW AT A GLANCE 
+WHO THEY'RE CONTROLLING
+
+ADD A THING TO TYPE IN ADRESS AND PORT INTO LOBBY FOR CONNECTION ANDYS
+
+PROBABLY MORE

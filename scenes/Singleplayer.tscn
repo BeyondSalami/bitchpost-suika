@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b80jgebtaxqj7"]
+[gd_scene load_steps=6 format=3 uid="uid://b80jgebtaxqj7"]
 
+[ext_resource type="Script" path="res://Scripts/Singleplayer_set_Singleplayer.gd" id="1_0xvxv"]
 [ext_resource type="PackedScene" uid="uid://4jdf2eyhqwhc" path="res://scenes/game-template.tscn" id="1_p37up"]
 [ext_resource type="Texture2D" uid="uid://db2hw7huuc7g1" path="res://sprites/controlls panel.png" id="6_o8gc6"]
 
@@ -11,6 +12,7 @@ colors = PackedColorArray(5.77569e-07, 0.413716, 0.47781, 1, 0.406475, 0.768776,
 gradient = SubResource("Gradient_qdix7")
 
 [node name="canvas" type="Node2D" groups=["disabled"]]
+script = ExtResource("1_0xvxv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 325)
