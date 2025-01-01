@@ -8,6 +8,7 @@ var resolution_index : int = 0
 var master_volume : float = 0.0
 var music_volume : float = 0.0
 var sfx_volume : float = 0.0
+var discord_rich : bool = false
 var classic_3_combine_state : bool = false
 
 var loaded_data : Dictionary = {}
@@ -23,6 +24,7 @@ func create_storage_dictionary() -> Dictionary:
 		"master_volume" : master_volume,
 		"music_volume" : music_volume,
 		"sfx_volume" : sfx_volume,
+		"discord_rich" : discord_rich,
 		"classic_3_combine_state" : classic_3_combine_state,
 		"keybinds" : create_keybinds_dictionary(),
 		}
@@ -67,6 +69,11 @@ func get_sfx_volume() -> float:
 	if loaded_data == {}:
 		return DEFAULT_SETTINGS.DEFAULT_SFX_VOLUME
 	return sfx_volume
+
+func get_discord_rich() -> bool:
+	if loaded_data == {}:
+		return DEFAULT_SETTINGS.DEFAULT_CLASSIC_3_COMBINE_STATE
+	return discord_rich
 
 func get_classic_3_combine_state() -> bool:
 	if loaded_data == {}:
@@ -128,6 +135,10 @@ func on_music_sound_set(value : float) -> void:
 func on_sfx_sound_set(value : float) -> void:
 	sfx_volume = value
 
+func on_discord_rich_toggled(value : bool) -> void:
+	discord_rich = value
+	print(discord_rich)
+
 func on_classic_3_combine_toggled(value : bool) -> void:
 	classic_3_combine_state = value
 
@@ -186,6 +197,7 @@ func on_settings_data_loaded(data : Dictionary) -> void:
 	on_master_sound_set(loaded_data.master_volume)
 	on_music_sound_set(loaded_data.music_volume)
 	on_sfx_sound_set(loaded_data.sfx_volume)
+	on_discord_rich_toggled(loaded_data.discord_rich)
 	on_classic_3_combine_toggled(loaded_data.classic_3_combine_state)
 	on_keybinds_loaded(loaded_data.keybinds)
 
@@ -196,5 +208,6 @@ func handle_signals() -> void:
 	SettingsSignalBus.on_master_sound_set.connect(on_master_sound_set)
 	SettingsSignalBus.on_music_sound_set.connect(on_music_sound_set)
 	SettingsSignalBus.on_sfx_sound_set.connect(on_sfx_sound_set)
+	SettingsSignalBus.on_discord_rich_toggled.connect(on_discord_rich_toggled)
 	SettingsSignalBus.on_classic_3_combine_toggled.connect(on_classic_3_combine_toggled)
 	SettingsSignalBus.load_settings_data.connect(on_settings_data_loaded)

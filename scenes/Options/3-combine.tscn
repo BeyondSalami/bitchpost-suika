@@ -13,14 +13,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
 script = ExtResource("1_pcfbx")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-clip_contents = true
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.664063
-anchor_bottom = 0.0555556
+layout_mode = 0
+offset_right = 814.0
+offset_bottom = 36.0
 theme_override_constants/separation = 64
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -48,7 +47,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_6hwml")
 
 [node name="state_label" type="Label" parent="HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 27
+theme_override_font_sizes/font_size = 26
 text = "Skip a Tier"
 
 [connection signal="toggled" from="HBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]

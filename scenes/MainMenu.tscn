@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bd4yjgsvfnvrp"]
+[gd_scene load_steps=18 format=3 uid="uid://bd4yjgsvfnvrp"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenuButton.gd" id="1_8yp6e"]
 [ext_resource type="Script" path="res://Scripts/MainMenuHide.gd" id="1_vx2ul"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://cmpkv8hbeih8y" path="res://Music/Cipher2.mp3" id="10_ec5og"]
 [ext_resource type="Script" path="res://Scripts/fps_counter.gd" id="10_pc44f"]
 [ext_resource type="PackedScene" uid="uid://dimgct67hwfni" path="res://scenes/Options/options.tscn" id="11_luf5t"]
+[ext_resource type="Script" path="res://Scripts/discord_manager.gd" id="13_qsiew"]
 
 [sub_resource type="Animation" id="Animation_3x3wy"]
 length = 0.001
@@ -340,6 +341,9 @@ bus = &"Music"
 
 [node name="Options" parent="." instance=ExtResource("11_luf5t")]
 visible = false
+
+[node name="Discord" type="Node" parent="."]
+script = ExtResource("13_qsiew")
 
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
 [connection signal="pressed" from="Play2" to="Play2" method="_on_pressed"]

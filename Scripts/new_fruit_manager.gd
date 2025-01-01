@@ -419,4 +419,3 @@ func clear_arrays():
 	pineapple_pos_array.clear()
 	melon_pos_array.clear()
 	watermelon_pos_array.clear()
-

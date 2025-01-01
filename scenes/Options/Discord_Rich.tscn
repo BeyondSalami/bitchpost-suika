@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw7uqlxwuh8yc"]
+
+[ext_resource type="Script" path="res://scenes/Options/Scripts/discord_rich_button.gd" id="1_m4wgu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_35ubi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4qi3t"]
+
+[node name="DiscordRich" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_m4wgu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 813.0
+offset_bottom = 36.0
+theme_override_constants/separation = 64
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Discord Rich Presence"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 80
+theme_override_styles/separator = SubResource("StyleBoxEmpty_35ubi")
+
+[node name="CheckButton" type="CheckButton" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+theme_override_styles/separator = SubResource("StyleBoxEmpty_4qi3t")
+
+[node name="Value" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Disabled
+"
+
+[connection signal="toggled" from="HBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]

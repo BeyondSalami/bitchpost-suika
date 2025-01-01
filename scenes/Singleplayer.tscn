@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b80jgebtaxqj7"]
+[gd_scene load_steps=6 format=3 uid="uid://b80jgebtaxqj7"]
 
 [ext_resource type="PackedScene" uid="uid://4jdf2eyhqwhc" path="res://scenes/game-template.tscn" id="1_p37up"]
+[ext_resource type="Script" path="res://Scripts/discord_manager_ingame.gd" id="3_g2tuh"]
 [ext_resource type="Texture2D" uid="uid://db2hw7huuc7g1" path="res://sprites/controlls panel.png" id="6_o8gc6"]
 
 [sub_resource type="Gradient" id="Gradient_qdix7"]
@@ -60,3 +61,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="garbage_can" type="Node2D" parent="."]
 position = Vector2(-424, 47)
+
+[node name="Discord_Manager_ingame" type="Node" parent="."]
+script = ExtResource("3_g2tuh")

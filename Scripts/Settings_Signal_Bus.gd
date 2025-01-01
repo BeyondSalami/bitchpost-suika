@@ -18,6 +18,8 @@ signal set_settings_dictionary(settings_dict : Dictionary)
 
 signal load_settings_data(settings_dict : Dictionary)
 
+signal on_discord_rich_toggled(value : bool)
+
 #functions
 
 func emit_load_settings_data(settings_dict : Dictionary) -> void:
@@ -30,6 +32,9 @@ func emit_set_settings_dictionary(settings_dict : Dictionary) -> void:
 
 func emit_on_classic_3_combine_toggled(value : bool) -> void:
 	on_classic_3_combine_toggled.emit(value)
+
+func emit_on_discord_rich_toggled(value : bool) -> void:
+	on_discord_rich_toggled.emit(value)
 
 func emit_on_window_mode_selected(index : int) -> void:
 	on_window_mode_selected.emit(index)

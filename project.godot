@@ -27,11 +27,16 @@ SaveManager="*res://Scripts/save_manager.gd"
 SignalBus="*res://Scripts/signal_bus.gd"
 SettingsContainer="*res://Scripts/Settings_Data_Container.gd"
 SettingsSignalBus="*res://Scripts/Settings_Signal_Bus.gd"
+DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 
 [display]
 
 window/size/resizable=false
 window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
 
 [input]
 

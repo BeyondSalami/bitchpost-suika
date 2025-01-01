@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxkxmia24gxi2"]
+[gd_scene load_steps=8 format=3 uid="uid://dxkxmia24gxi2"]
 
 [ext_resource type="Script" path="res://Scripts/multiplayer_root.gd" id="1_8qsb5"]
 [ext_resource type="Script" path="res://Scripts/Score_Reader_1.gd" id="1_ddee6"]
 [ext_resource type="PackedScene" uid="uid://4jdf2eyhqwhc" path="res://scenes/game-template.tscn" id="1_rcnip"]
 [ext_resource type="Resource" uid="uid://dbctjcfli55j2" path="res://Resources/P2_controls.tres" id="2_s03d1"]
+[ext_resource type="Script" path="res://Scripts/discord_manager_ingame.gd" id="5_qcm15"]
 
 [sub_resource type="Gradient" id="Gradient_d3a4o"]
 offsets = PackedFloat32Array(0, 0.493976, 1)
@@ -12,7 +13,7 @@ colors = PackedColorArray(5.77569e-07, 0.413716, 0.47781, 1, 0.406475, 0.768776,
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_kv567"]
 gradient = SubResource("Gradient_d3a4o")
 
-[node name="Node2D" type="Node2D"]
+[node name="Multiplayer" type="Node2D"]
 script = ExtResource("1_8qsb5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -242,6 +243,9 @@ scale = Vector2(0.166667, 0.168403)
 [node name="duck" parent="Game2/up_next" index="3"]
 position = Vector2(568, 31)
 scale = Vector2(0.162712, 0.162712)
+
+[node name="Discord_Manager" type="Node" parent="."]
+script = ExtResource("5_qcm15")
 
 [editable path="Game"]
 [editable path="Game2"]
