@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dimgct67hwfni"]
 
 [ext_resource type="PackedScene" uid="uid://dv6ehw72llbi5" path="res://scenes/Options/Settings_Tab_Container.tscn" id="1_eepua"]
-[ext_resource type="Script" path="res://Scripts/exit_button_options.gd" id="1_emc22"]
+[ext_resource type="Script" uid="uid://donfd63axqnfe" path="res://Scripts/exit_button_options.gd" id="1_emc22"]
 
 [node name="Options" type="Control"]
 layout_mode = 3

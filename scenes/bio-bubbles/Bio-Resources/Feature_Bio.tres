@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Bio_Resource" load_steps=3 format=3 uid="uid://dl2haqi31x6tl"]
 
-[ext_resource type="Script" path="res://scenes/bio-bubbles/Bio-Resources/Template/Bio_Resource_Script.gd" id="1_kfqpd"]
+[ext_resource type="Script" uid="uid://dvtqkkewobgd7" path="res://scenes/bio-bubbles/Bio-Resources/Template/Bio_Resource_Script.gd" id="1_kfqpd"]
 [ext_resource type="Texture2D" uid="uid://cmbutay2mpqcb" path="res://sprites/fruits/circles/feature.png" id="1_tk8mr"]
 
 [resource]

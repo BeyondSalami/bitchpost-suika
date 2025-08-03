@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Bio_Resource" load_steps=3 format=3 uid="uid://d15lqsf8xpome"]
 
 [ext_resource type="Texture2D" uid="uid://ctfollchk4wb6" path="res://sprites/fruits/circles/chim.png" id="1_4dbut"]
-[ext_resource type="Script" path="res://scenes/bio-bubbles/Bio-Resources/Template/Bio_Resource_Script.gd" id="1_mjek2"]
+[ext_resource type="Script" uid="uid://dvtqkkewobgd7" path="res://scenes/bio-bubbles/Bio-Resources/Template/Bio_Resource_Script.gd" id="1_mjek2"]
 
 [resource]
 script = ExtResource("1_mjek2")

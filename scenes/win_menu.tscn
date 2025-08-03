@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://btweky0fi4c4n"]
 
-[ext_resource type="Script" path="res://Scripts/Back_To_Menu.gd" id="1_gtlr8"]
+[ext_resource type="Script" uid="uid://dledwkqotc5iq" path="res://Scripts/Back_To_Menu.gd" id="1_gtlr8"]
 [ext_resource type="AudioStream" uid="uid://cbidhemnlumls" path="res://Music/jerma-scorn.mp3" id="2_bviv2"]
 
 [node name="WinMenu" type="Control"]

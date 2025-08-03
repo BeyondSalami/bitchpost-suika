@@ -1,18 +1,18 @@
 [gd_scene load_steps=18 format=3 uid="uid://bd4yjgsvfnvrp"]
 
-[ext_resource type="Script" path="res://Scripts/MainMenuButton.gd" id="1_8yp6e"]
-[ext_resource type="Script" path="res://Scripts/MainMenuHide.gd" id="1_vx2ul"]
-[ext_resource type="Script" path="res://Scripts/Load_data.gd" id="2_axqn0"]
-[ext_resource type="Script" path="res://Scripts/SplashText.gd" id="2_x2scc"]
-[ext_resource type="Script" path="res://Scripts/save_data.gd" id="3_7qsol"]
-[ext_resource type="Script" path="res://Scripts/MultiMenuButton.gd" id="3_fn006"]
-[ext_resource type="Script" path="res://Scripts/mm_score.gd" id="5_tcicf"]
-[ext_resource type="Script" path="res://Scripts/Options_Menu.gd" id="6_fqd4w"]
-[ext_resource type="Script" path="res://Scripts/Who_is_that.gd" id="6_pdpyb"]
+[ext_resource type="Script" uid="uid://kjnkryn7tla0" path="res://Scripts/MainMenuButton.gd" id="1_8yp6e"]
+[ext_resource type="Script" uid="uid://bxep2sdmcwnpp" path="res://Scripts/MainMenuHide.gd" id="1_vx2ul"]
+[ext_resource type="Script" uid="uid://bcwfehd6uii8n" path="res://Scripts/Load_data.gd" id="2_axqn0"]
+[ext_resource type="Script" uid="uid://c532kty46eg8q" path="res://Scripts/SplashText.gd" id="2_x2scc"]
+[ext_resource type="Script" uid="uid://c3iqy0m4titb1" path="res://Scripts/save_data.gd" id="3_7qsol"]
+[ext_resource type="Script" uid="uid://dgvckc2yi3wl7" path="res://Scripts/MultiMenuButton.gd" id="3_fn006"]
+[ext_resource type="Script" uid="uid://etoo21q0kopx" path="res://Scripts/mm_score.gd" id="5_tcicf"]
+[ext_resource type="Script" uid="uid://bm8pwkg03nrfl" path="res://Scripts/Options_Menu.gd" id="6_fqd4w"]
+[ext_resource type="Script" uid="uid://bqrm0tjpq7dyk" path="res://Scripts/Who_is_that.gd" id="6_pdpyb"]
 [ext_resource type="AudioStream" uid="uid://cmpkv8hbeih8y" path="res://Music/Cipher2.mp3" id="10_ec5og"]
-[ext_resource type="Script" path="res://Scripts/fps_counter.gd" id="10_pc44f"]
+[ext_resource type="Script" uid="uid://dqohqjj8i7hi7" path="res://Scripts/fps_counter.gd" id="10_pc44f"]
 [ext_resource type="PackedScene" uid="uid://dimgct67hwfni" path="res://scenes/Options/options.tscn" id="11_luf5t"]
-[ext_resource type="Script" path="res://Scripts/discord_manager.gd" id="13_qsiew"]
+[ext_resource type="Script" uid="uid://bb4ufwjh4lseq" path="res://Scripts/discord_manager.gd" id="13_qsiew"]
 
 [sub_resource type="Animation" id="Animation_3x3wy"]
 length = 0.001
@@ -125,9 +125,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ayu58"]
 _data = {
-"RESET": SubResource("Animation_3x3wy"),
-"Splash-Default": SubResource("Animation_v4btl"),
-"Splash-Rainbow": SubResource("Animation_138cm")
+&"RESET": SubResource("Animation_3x3wy"),
+&"Splash-Default": SubResource("Animation_v4btl"),
+&"Splash-Rainbow": SubResource("Animation_138cm")
 }
 
 [node name="MainMenu" type="Control" groups=["menu"]]
@@ -171,7 +171,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="title/Splash"]
 libraries = {
-"": SubResource("AnimationLibrary_ayu58")
+&"": SubResource("AnimationLibrary_ayu58")
 }
 autoplay = "Splash-Default"
 
@@ -183,15 +183,13 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -302.0
-offset_top = -73.0
+offset_top = -88.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
-text = "v0.0.7
-Development in Progress
-"
+text = "v0.0.7 - Web
+Development in Progress"
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 1
@@ -226,6 +224,7 @@ script = ExtResource("3_fn006")
 metadata/_edit_use_anchors_ = true
 
 [node name="Load" type="Button" parent="."]
+visible = false
 layout_mode = 0
 anchor_left = 0.58073
 anchor_top = 0.50463
@@ -237,6 +236,7 @@ script = ExtResource("2_axqn0")
 metadata/_edit_use_anchors_ = true
 
 [node name="Save" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.255208
@@ -275,21 +275,6 @@ theme_override_font_sizes/font_size = 30
 action_mode = 0
 text = "Options"
 script = ExtResource("6_fqd4w")
-metadata/_edit_use_anchors_ = true
-
-[node name="OptionsButton2" type="Button" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.580729
-anchor_top = 0.708333
-anchor_right = 0.743056
-anchor_bottom = 0.854938
-offset_top = -3.05176e-05
-theme_override_font_sizes/font_size = 30
-action_mode = 0
-text = "Options
-(Disabled)"
 metadata/_edit_use_anchors_ = true
 
 [node name="Who" type="Button" parent="."]
@@ -344,6 +329,19 @@ visible = false
 
 [node name="Discord" type="Node" parent="."]
 script = ExtResource("13_qsiew")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 320.0
+offset_right = 856.0
+offset_bottom = 459.0
+theme_override_font_sizes/font_size = 20
+text = "Saving and Loading have been disabled in the web build. 
+sorry!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
 [connection signal="pressed" from="Play2" to="Play2" method="_on_pressed"]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Bio_Resource" load_steps=3 format=3 uid="uid://dp572h76k436n"]
 
-[ext_resource type="Script" path="res://scenes/bio-bubbles/Bio-Resources/Template/Bio_Resource_Script.gd" id="1_b7v17"]
+[ext_resource type="Script" uid="uid://dvtqkkewobgd7" path="res://scenes/bio-bubbles/Bio-Resources/Template/Bio_Resource_Script.gd" id="1_b7v17"]
 [ext_resource type="Texture2D" uid="uid://gl6idtlrlts1" path="res://sprites/fruits/circles/TOASTER.png" id="1_c86oh"]
 
 [resource]

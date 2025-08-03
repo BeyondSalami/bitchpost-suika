@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://5wn8lsuvgmm1"]
 
 [ext_resource type="Texture2D" uid="uid://blhyofcypcujr" path="res://sprites/fruits/circles/mac.png" id="1_bimf0"]
-[ext_resource type="Script" path="res://balls/ball_types/cherry_check.gd" id="1_s0ecc"]
-[ext_resource type="Script" path="res://balls/method_scripts/Cherry_method.gd" id="3_64y28"]
+[ext_resource type="Script" uid="uid://jblrq4rds4es" path="res://balls/ball_types/cherry_check.gd" id="1_s0ecc"]
+[ext_resource type="Script" uid="uid://cugubj48kia0u" path="res://balls/method_scripts/Cherry_method.gd" id="3_64y28"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4a07v"]
 radius = 17.0294

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://ci0eftq5k7ggb"]
 
 [ext_resource type="Texture2D" uid="uid://bl2o4t3g8uyy4" path="res://sprites/fruits/circles/duckaccino.png" id="1_g08ng"]
-[ext_resource type="Script" path="res://balls/ball_types/tangerine_check.gd" id="1_o2nb2"]
-[ext_resource type="Script" path="res://balls/method_scripts/tangerine_method.gd" id="2_84xub"]
+[ext_resource type="Script" uid="uid://nugqy5jcnbmr" path="res://balls/ball_types/tangerine_check.gd" id="1_o2nb2"]
+[ext_resource type="Script" uid="uid://b46tmnxv43pmn" path="res://balls/method_scripts/tangerine_method.gd" id="2_84xub"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_85lh3"]
 radius = 45.0111

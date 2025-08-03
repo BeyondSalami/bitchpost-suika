@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvnyim6kworu3"]
 
-[ext_resource type="Script" path="res://scenes/Options/Scripts/Hotkey_Rebind_Button.gd" id="1_qvhx2"]
+[ext_resource type="Script" uid="uid://cmoj88f4cx13e" path="res://scenes/Options/Scripts/Hotkey_Rebind_Button.gd" id="1_qvhx2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ywur7"]
 

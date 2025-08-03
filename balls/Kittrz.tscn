@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://be0ugd8kqnabt"]
 
-[ext_resource type="Script" path="res://balls/ball_types/grape_check.gd" id="1_tswow"]
+[ext_resource type="Script" uid="uid://ew7e3rf75kt2" path="res://balls/ball_types/grape_check.gd" id="1_tswow"]
 [ext_resource type="Texture2D" uid="uid://bngxihheymywt" path="res://sprites/fruits/circles/kittrz.png" id="2_td54e"]
-[ext_resource type="Script" path="res://balls/method_scripts/grape_func.gd" id="3_pp2ar"]
+[ext_resource type="Script" uid="uid://m664ipit6q3o" path="res://balls/method_scripts/grape_func.gd" id="3_pp2ar"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2jkiv"]
 radius = 34.0

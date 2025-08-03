@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://d0dl817w0p338"]
 
 [ext_resource type="Texture2D" uid="uid://blhyofcypcujr" path="res://sprites/fruits/circles/mac.png" id="1_760mt"]
-[ext_resource type="Script" path="res://Scripts/Pfp-Explanation.gd" id="1_a1cji"]
+[ext_resource type="Script" uid="uid://cektbxjo5aj33" path="res://Scripts/Pfp-Explanation.gd" id="1_a1cji"]
 [ext_resource type="Texture2D" uid="uid://gl6idtlrlts1" path="res://sprites/fruits/circles/TOASTER.png" id="2_ajbue"]
 [ext_resource type="Texture2D" uid="uid://cmbutay2mpqcb" path="res://sprites/fruits/circles/feature.png" id="2_domrj"]
 [ext_resource type="Texture2D" uid="uid://bngxihheymywt" path="res://sprites/fruits/circles/kittrz.png" id="4_45vh2"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c2hbbsso3encn" path="res://sprites/fruits/circles/gilgermage.png" id="8_haa8g"]
 [ext_resource type="Texture2D" uid="uid://d3qj6h24k30lo" path="res://sprites/fruits/circles/blue.png" id="10_y6vdu"]
 [ext_resource type="Texture2D" uid="uid://wl1d6uaa5ks3" path="res://sprites/fruits/circles/simple.png" id="11_74xq2"]
-[ext_resource type="Script" path="res://Scripts/close button.gd" id="12_la4f8"]
+[ext_resource type="Script" uid="uid://bhnmn8ildtm40" path="res://Scripts/close button.gd" id="12_la4f8"]
 
 [node name="WHO??" type="Control"]
 z_index = 1
