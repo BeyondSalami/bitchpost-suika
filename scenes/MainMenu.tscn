@@ -277,6 +277,24 @@ text = "Options"
 script = ExtResource("6_fqd4w")
 metadata/_edit_use_anchors_ = true
 
+[node name="Label" type="Label" parent="OptionsButton"]
+layout_mode = 0
+anchor_left = -2.09625
+anchor_top = -1.77895
+anchor_right = 1.09625
+anchor_bottom = 1.02105
+offset_right = -1.52588e-05
+theme_override_font_sizes/font_size = 20
+text = "Saving and Loading have been disabled in the web build. 
+please set your controls in the options menu before playing.
+sorry!
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
 [node name="Who" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -329,19 +347,6 @@ visible = false
 
 [node name="Discord" type="Node" parent="."]
 script = ExtResource("13_qsiew")
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 294.0
-offset_top = 320.0
-offset_right = 856.0
-offset_bottom = 459.0
-theme_override_font_sizes/font_size = 20
-text = "Saving and Loading have been disabled in the web build. 
-sorry!
-"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
 [connection signal="pressed" from="Play2" to="Play2" method="_on_pressed"]
