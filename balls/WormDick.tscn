@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://72xnm6djh5s4"]
 
-[ext_resource type="Script" path="res://balls/ball_types/dekopan_check.gd" id="1_5e2j7"]
+[ext_resource type="Script" uid="uid://bjgiyf7k1fbj8" path="res://balls/ball_types/dekopan_check.gd" id="1_5e2j7"]
 [ext_resource type="Texture2D" uid="uid://bgyyc2pp84ky4" path="res://sprites/fruits/circles/wormdick.png" id="2_hn2ys"]
-[ext_resource type="Script" path="res://balls/method_scripts/dekopan_method.gd" id="3_kn6mk"]
+[ext_resource type="Script" uid="uid://b2ous648p2k5f" path="res://balls/method_scripts/dekopan_method.gd" id="3_kn6mk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0pesg"]
 radius = 69.0

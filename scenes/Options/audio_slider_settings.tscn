@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpu6btjjo6a28"]
 
-[ext_resource type="Script" path="res://scenes/Options/Scripts/audio_slider_settings.gd" id="1_exdk8"]
+[ext_resource type="Script" uid="uid://cqwtftfwjq0hg" path="res://scenes/Options/Scripts/audio_slider_settings.gd" id="1_exdk8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ugi25"]
 

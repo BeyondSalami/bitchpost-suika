@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://c0ow5ab214pnv"]
 
 [ext_resource type="Texture2D" uid="uid://dkpvppq451o5e" path="res://sprites/fruits/circles/list.png" id="1_7b5wc"]
-[ext_resource type="Script" path="res://balls/ball_types/apple_check.gd" id="1_wrlbo"]
-[ext_resource type="Script" path="res://balls/method_scripts/apple_method.gd" id="3_fwtqn"]
+[ext_resource type="Script" uid="uid://cm5iexvu0rgo0" path="res://balls/ball_types/apple_check.gd" id="1_wrlbo"]
+[ext_resource type="Script" uid="uid://bnclqli377c68" path="res://balls/method_scripts/apple_method.gd" id="3_fwtqn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q0amu"]
 radius = 610.328

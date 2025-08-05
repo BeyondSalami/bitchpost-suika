@@ -10,4 +10,3 @@ func _on_item_list_item_activated(index):
 	var instance = template.instantiate()
 	instance.index_passthrough = index
 	add_child(instance)
-

@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://dxkxmia24gxi2"]
 
-[ext_resource type="Script" path="res://Scripts/multiplayer_root.gd" id="1_8qsb5"]
-[ext_resource type="Script" path="res://Scripts/Score_Reader_1.gd" id="1_ddee6"]
+[ext_resource type="Script" uid="uid://k1nc7dwtmluq" path="res://Scripts/multiplayer_root.gd" id="1_8qsb5"]
+[ext_resource type="Script" uid="uid://b6i5bvq1d2dft" path="res://Scripts/Score_Reader_1.gd" id="1_ddee6"]
 [ext_resource type="PackedScene" uid="uid://4jdf2eyhqwhc" path="res://scenes/game-template.tscn" id="1_rcnip"]
 [ext_resource type="Resource" uid="uid://dbctjcfli55j2" path="res://Resources/P2_controls.tres" id="2_s03d1"]
-[ext_resource type="Script" path="res://Scripts/discord_manager_ingame.gd" id="5_qcm15"]
+[ext_resource type="Script" uid="uid://dsb4vj0tniap0" path="res://Scripts/discord_manager_ingame.gd" id="5_qcm15"]
 
 [sub_resource type="Gradient" id="Gradient_d3a4o"]
 offsets = PackedFloat32Array(0, 0.493976, 1)

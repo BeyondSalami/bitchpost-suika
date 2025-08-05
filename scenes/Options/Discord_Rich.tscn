@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dw7uqlxwuh8yc"]
 
-[ext_resource type="Script" path="res://scenes/Options/Scripts/discord_rich_button.gd" id="1_m4wgu"]
+[ext_resource type="Script" uid="uid://cu46j2u0c7w6p" path="res://scenes/Options/Scripts/discord_rich_button.gd" id="1_m4wgu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_35ubi"]
 

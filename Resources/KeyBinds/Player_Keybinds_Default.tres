@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PlayerKeybindsResource" load_steps=10 format=3 uid="uid://cbi213q1xmnms"]
 
-[ext_resource type="Script" path="res://Resources/KeyBinds/PlayerKeybindResource.gd" id="1_lfsev"]
+[ext_resource type="Script" uid="uid://dqegbk10d2ygx" path="res://Resources/KeyBinds/PlayerKeybindResource.gd" id="1_lfsev"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_hifit"]
 device = -1

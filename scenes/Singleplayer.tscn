@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b80jgebtaxqj7"]
 
 [ext_resource type="PackedScene" uid="uid://4jdf2eyhqwhc" path="res://scenes/game-template.tscn" id="1_p37up"]
-[ext_resource type="Script" path="res://Scripts/discord_manager_ingame.gd" id="3_g2tuh"]
+[ext_resource type="Script" uid="uid://dsb4vj0tniap0" path="res://Scripts/discord_manager_ingame.gd" id="3_g2tuh"]
 [ext_resource type="Texture2D" uid="uid://db2hw7huuc7g1" path="res://sprites/controlls panel.png" id="6_o8gc6"]
 
 [sub_resource type="Gradient" id="Gradient_qdix7"]
@@ -25,9 +25,42 @@ texture = SubResource("GradientTexture1D_x7oww")
 [node name="Game" parent="." instance=ExtResource("1_p37up")]
 
 [node name="ControllsPanel" type="Sprite2D" parent="."]
-position = Vector2(164, 411)
+position = Vector2(161, 416)
 scale = Vector2(0.56, 0.56)
 texture = ExtResource("6_o8gc6")
+
+[node name="Label2" type="Label" parent="ControllsPanel"]
+anchors_preset = -1
+anchor_left = 0.0563906
+anchor_top = 1.87341
+anchor_right = 0.942754
+anchor_bottom = 2.26185
+offset_left = -226.812
+offset_top = -1679.81
+offset_right = -226.812
+offset_bottom = -1679.81
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "(if left at default)"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="ControllsPanel"]
+offset_left = -195.0
+offset_top = 189.0
+offset_right = 184.0
+offset_bottom = 344.0
+
+[node name="Label" type="Label" parent="ControllsPanel"]
+offset_left = -137.5
+offset_top = 183.929
+offset_right = 120.5
+offset_bottom = 297.929
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 56
+text = "Have fun!"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -43,21 +76,6 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 37
 text = "Up Next:"
-
-[node name="Label2" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0365854
-anchor_top = 1.87379
-anchor_right = 0.943089
-anchor_bottom = 2.26214
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "(if left at default)"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="garbage_can" type="Node2D" parent="."]
 position = Vector2(-424, 47)

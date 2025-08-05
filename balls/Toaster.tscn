@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bmnsilyo3r2cc"]
 
-[ext_resource type="Script" path="res://balls/ball_types/pineapple_check.gd" id="1_fvkoq"]
+[ext_resource type="Script" uid="uid://sdxdrfq1oevg" path="res://balls/ball_types/pineapple_check.gd" id="1_fvkoq"]
 [ext_resource type="Texture2D" uid="uid://gl6idtlrlts1" path="res://sprites/fruits/circles/TOASTER.png" id="2_vmrlu"]
-[ext_resource type="Script" path="res://balls/method_scripts/pineapple_method.gd" id="3_v7le0"]
+[ext_resource type="Script" uid="uid://cycf55aejqnrc" path="res://balls/method_scripts/pineapple_method.gd" id="3_v7le0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s67sy"]
 radius = 92.0869

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bw1a4x0lufmy5"]
 
-[ext_resource type="Script" path="res://balls/ball_types/peach_check.gd" id="1_icht1"]
+[ext_resource type="Script" uid="uid://cjrqyu7v23htl" path="res://balls/ball_types/peach_check.gd" id="1_icht1"]
 [ext_resource type="Texture2D" uid="uid://c2hbbsso3encn" path="res://sprites/fruits/circles/gilgermage.png" id="2_n6p70"]
-[ext_resource type="Script" path="res://balls/method_scripts/peach_method.gd" id="3_qvd1t"]
+[ext_resource type="Script" uid="uid://d05igs8ea2i11" path="res://balls/method_scripts/peach_method.gd" id="3_qvd1t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wg4yg"]
 radius = 81.0062

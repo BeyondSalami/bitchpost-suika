@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bq4dc677bib8d"]
 
-[ext_resource type="Script" path="res://Scripts/Bio-Popup-Filler.gd" id="1_rwohu"]
-[ext_resource type="Script" path="res://Scripts/close button.gd" id="2_2s3pb"]
+[ext_resource type="Script" uid="uid://bgfj6cl42bel6" path="res://Scripts/Bio-Popup-Filler.gd" id="1_rwohu"]
+[ext_resource type="Script" uid="uid://bhnmn8ildtm40" path="res://Scripts/close button.gd" id="2_2s3pb"]
 [ext_resource type="Texture2D" uid="uid://q4h3w12bqsnl" path="res://sprites/fruits/circles/placeholder.png" id="2_13qj7"]
 
 [node name="Template-bio-popup" type="Control"]

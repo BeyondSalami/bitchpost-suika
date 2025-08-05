@@ -12,12 +12,12 @@ config_version=5
 
 config/name="lil-bitch-suika"
 config/description="combine fruits for infinite fortune"
-config/version="0.0.5"
+config/version="1.0"
 run/main_scene="res://scenes/MainMenu.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
-boot_splash/image="res://sprites/companylogo.png"
+config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/fullsize=false
 boot_splash/use_filter=false
+boot_splash/image="res://sprites/companylogo.png"
 config/icon="res://sprites/program.png"
 
 [autoload]

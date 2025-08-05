@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://g0u5x5pk08yu"]
 
-[ext_resource type="Script" path="res://balls/ball_types/melon_check.gd" id="1_c8r1s"]
-[ext_resource type="Script" path="res://balls/method_scripts/melon_method.gd" id="2_w1d0w"]
+[ext_resource type="Script" uid="uid://dpr70hjrejgo8" path="res://balls/ball_types/melon_check.gd" id="1_c8r1s"]
+[ext_resource type="Script" uid="uid://bgkopwsbadlfa" path="res://balls/method_scripts/melon_method.gd" id="2_w1d0w"]
 [ext_resource type="Texture2D" uid="uid://d3qj6h24k30lo" path="res://sprites/fruits/circles/blue.png" id="3_vqivg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ljg8n"]

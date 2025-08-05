@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Bio_Resource" load_steps=3 format=3 uid="uid://cx60r6lq2dl27"]
 
-[ext_resource type="Script" path="res://scenes/bio-bubbles/Bio-Resources/Template/Bio_Resource_Script.gd" id="1_h6rr0"]
+[ext_resource type="Script" uid="uid://dvtqkkewobgd7" path="res://scenes/bio-bubbles/Bio-Resources/Template/Bio_Resource_Script.gd" id="1_h6rr0"]
 [ext_resource type="Texture2D" uid="uid://blhyofcypcujr" path="res://sprites/fruits/circles/mac.png" id="1_m2gmi"]
 
 [resource]
 script = ExtResource("1_h6rr0")
 Name = "Mac"
-Bio = "Mac. GUy."
-Pfp_Source = "Mac also"
+Bio = ""
+Pfp_Source = "Mac"
 Pfp_Texture = ExtResource("1_m2gmi")

@@ -387,6 +387,9 @@ func _process(_delta):
 	
 	if watermelon_pos_array.size() >= 2:
 		score += 1000
+	
+	clear_arrays()
+
 
 func _unhandled_input(_event):
 	if Input.is_physical_key_pressed(KEY_X):

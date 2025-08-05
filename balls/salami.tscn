@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://f05xiom1axdu"]
 
-[ext_resource type="Script" path="res://balls/ball_types/orange_check.gd" id="1_0hgvv"]
+[ext_resource type="Script" uid="uid://s4na5q8f3tvn" path="res://balls/ball_types/orange_check.gd" id="1_0hgvv"]
 [ext_resource type="Texture2D" uid="uid://ck4ckaojt0ghg" path="res://sprites/fruits/circles/salami.png" id="1_20lg6"]
-[ext_resource type="Script" path="res://balls/method_scripts/orange_func.gd" id="3_gpi64"]
+[ext_resource type="Script" uid="uid://pi2aj014bk8a" path="res://balls/method_scripts/orange_func.gd" id="3_gpi64"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_igd7i"]
 radius = 530.377
