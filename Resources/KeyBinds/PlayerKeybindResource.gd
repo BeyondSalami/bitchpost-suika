@@ -28,4 +28,3 @@ var p2_left_key = InputEventKey.new()
 var p2_right_key = InputEventKey.new()
 var p2_drop_key = InputEventKey.new()
 var p2_quit_key = InputEventKey.new()
-

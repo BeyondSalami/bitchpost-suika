@@ -1,6 +1,6 @@
 extends Node
 
-@onready var DEFAULT_SETTINGS : DefaultSettingsResource = preload("res://Resources/Settings/DEFAULT_SETTINGS.tres")
+@onready var DEFAULT_SETTINGS : DefaultSettingsResource = preload("res://Resources/Settings/Default_Settings.tres")
 var keybind_resource: PlayerKeybindsResource = preload("res://Resources/KeyBinds/Player_Keybinds_Default.tres")
 
 var window_mode_index : int = 0
