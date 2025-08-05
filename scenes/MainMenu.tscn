@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bd4yjgsvfnvrp"]
+[gd_scene load_steps=25 format=3 uid="uid://bd4yjgsvfnvrp"]
 
 [ext_resource type="Script" uid="uid://kjnkryn7tla0" path="res://Scripts/MainMenuButton.gd" id="1_8yp6e"]
 [ext_resource type="Script" uid="uid://bxep2sdmcwnpp" path="res://Scripts/MainMenuHide.gd" id="1_vx2ul"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://etoo21q0kopx" path="res://Scripts/mm_score.gd" id="5_tcicf"]
 [ext_resource type="Script" uid="uid://bm8pwkg03nrfl" path="res://Scripts/Options_Menu.gd" id="6_fqd4w"]
 [ext_resource type="Script" uid="uid://bqrm0tjpq7dyk" path="res://Scripts/Who_is_that.gd" id="6_pdpyb"]
+[ext_resource type="AudioStream" uid="uid://cbeacnubfw472" path="res://Music/Cipher2.mp3" id="10_ec5og"]
 [ext_resource type="Script" uid="uid://dqohqjj8i7hi7" path="res://Scripts/fps_counter.gd" id="10_pc44f"]
 [ext_resource type="PackedScene" uid="uid://dimgct67hwfni" path="res://scenes/Options/options.tscn" id="11_luf5t"]
 [ext_resource type="Script" uid="uid://bb4ufwjh4lseq" path="res://Scripts/discord_manager.gd" id="13_qsiew"]
@@ -317,12 +318,12 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -156.0
+offset_left = -66.0
 offset_top = -38.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
-text = "v1.0 - Web"
+text = "v1.0"
 horizontal_alignment = 1
 
 [node name="Play" type="Button" parent="."]
@@ -364,7 +365,6 @@ anchor_top = 0.50463
 anchor_right = 0.743056
 anchor_bottom = 0.651235
 theme_override_font_sizes/font_size = 39
-disabled = true
 text = "Load"
 script = ExtResource("2_axqn0")
 metadata/_edit_use_anchors_ = true
@@ -379,7 +379,6 @@ anchor_bottom = 0.651235
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 39
-disabled = true
 text = "Save"
 script = ExtResource("3_7qsol")
 metadata/_edit_use_anchors_ = true
@@ -453,7 +452,8 @@ script = ExtResource("10_pc44f")
 metadata/_edit_use_anchors_ = true
 
 [node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
-volume_db = -8.78
+stream = ExtResource("10_ec5og")
+volume_db = -5.0
 autoplay = true
 bus = &"Music"
 
