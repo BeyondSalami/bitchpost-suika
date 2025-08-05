@@ -6,11 +6,6 @@
 ## @tutorial: https://github.com/vaporvee/discord-rpc-godot/wiki
 extends Node
 
-var first_launch
-
-func _ready() -> void:
-	first_launch = true
-
 func  _process(_delta) -> void:
 	DiscordRPC.run_callbacks()
 

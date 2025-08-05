@@ -4,13 +4,6 @@ const START_OF_GAME_ALERT = preload("res://scenes/start_of_game_alert.tscn")
 
 var egg_is_yes = false
 
-func _ready() -> void:
-	if DiscordRPCLoader.first_launch == true:
-		DiscordRPCLoader.first_launch = false
-		if OS.get_name() == "Web":
-			var warning = START_OF_GAME_ALERT.instantiate()
-			add_child(warning)
-
 func hide_screen():
 	hide()
 
