@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_j6e5c")
 Name = "Simpleflips"
-Bio = "Toad is one of the main characters of the Super Mario franchise. He is Princess Peach's attendant, a friend of Mario and Luigi, and a longtime protector of the Mushroom Kingdom. Toad usually has the role of being the representative of his species in the Super Mario franchise's spin-off titles alongside Toadette (ever since her introduction in Mario Kart: Double Dash!!), often being associated with mushrooms and grouped with other Toads. However, he occasionally has been a main protagonist, such as in Super Mario Bros. 2 and Super Mario Run, as well as his starring roles in Wario's Woods and Kinopio Live. Toad is actually a singular character among an entire species of look-alikes that share his name (much like Yoshi and the Yoshi species), leading to confusion over some of his appearances. What usually sets him apart from from other Toads are his mismatched spots and vest, and his role as Princess Peach's steward.The above text is from the Super Mario Wiki and is available under a Creative Commons license. Attribution must be provided through a list of authors or a link back to the original article. Source: https://www.mariowiki.com/Toad"
-Pfp_Source = "idk ill dm him and ask"
+Bio = ""
+Pfp_Source = ""
 Pfp_Texture = ExtResource("1_vfk1s")

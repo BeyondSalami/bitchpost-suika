@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=3 uid="uid://e6t32hhy725b"]
+
+[sub_resource type="GDScript" id="GDScript_r3kjo"]
+resource_name = "WarningBox"
+script/source = "extends Control
+
+func _on_button_pressed() -> void:
+	self.queue_free()
+"
+
+[node name="WarningBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_r3kjo")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+vertical = true
+
+[node name="ColorRect" type="ColorRect" parent="BoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0555556
+anchor_right = 0.944444
+anchor_bottom = 0.998457
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(500, 130.655)
+layout_direction = 4
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "[color=#ffff00]Alert!﻿[/color]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+tab_size = 3
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "The person who coded this game is a fucking nincompoop, so this version of the game does not start with controls bound.  you will need to bind them yourself. you can do so in the options menu on the bottom right.
+
+The web port (what you are playing on now) does not feature saving and loading, and also probably has extra bugs. I apologize, but i will most likely not be fixing any bugs found in this version, because i am lazy as fuck and do not care.
+
+Finally, we have removed the Tickle Monster easter egg due to copywrite concerns.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "i understand"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_kfqpd")
 Name = "Itsafeature"
-Bio = "It's not a bug."
-Pfp_Source = "Fucking. No Clue."
+Bio = ""
+Pfp_Source = ""
 Pfp_Texture = ExtResource("1_tk8mr")

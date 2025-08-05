@@ -8,4 +8,3 @@ func _on_combine_hitbox_area_entered(area):
 		NewFruitManager.grape_pos_array.append(current_pos)
 		NewFruitManager.score += 4
 		queue_free()
-

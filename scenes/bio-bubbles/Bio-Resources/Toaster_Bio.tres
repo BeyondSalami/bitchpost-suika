@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_b7v17")
 Name = "Toaster"
-Bio = "ultimate capper"
+Bio = ""
 Pfp_Source = "Toaster"
 Pfp_Texture = ExtResource("1_c86oh")

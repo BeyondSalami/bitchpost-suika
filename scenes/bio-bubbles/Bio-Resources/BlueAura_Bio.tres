@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_rvc4k")
 Name = "BlueAura"
-Bio = "Niche Internet Micro Celebrity"
-Pfp_Source = "i think uhm fuckin like, cuphead"
+Bio = ""
+Pfp_Source = ""
 Pfp_Texture = ExtResource("1_jjbhk")

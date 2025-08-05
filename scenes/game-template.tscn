@@ -142,7 +142,7 @@ texture = ExtResource("9_jelgf")
 
 [node name="duck" type="Sprite2D" parent="Board/balls_guide"]
 position = Vector2(1042, 217)
-scale = Vector2(0.223, 0.223)
+scale = Vector2(0.043, 0.043)
 texture = ExtResource("10_pewei")
 
 [node name="worm" type="Sprite2D" parent="Board/balls_guide"]
@@ -328,8 +328,8 @@ texture = ExtResource("24_3stmm")
 
 [node name="duck" type="Sprite2D" parent="up_next"]
 visible = false
-position = Vector2(198, 88)
-scale = Vector2(0.165, 0.165)
+position = Vector2(199.5, 88)
+scale = Vector2(0.044, 0.045)
 texture = ExtResource("10_pewei")
 
 [connection signal="area_entered" from="Board/death zone" to="Board/death zone" method="_on_area_entered"]

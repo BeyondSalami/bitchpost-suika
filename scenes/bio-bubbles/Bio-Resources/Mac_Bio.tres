@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_h6rr0")
 Name = "Mac"
-Bio = "Mac. GUy."
-Pfp_Source = "Mac also"
+Bio = ""
+Pfp_Source = "Mac"
 Pfp_Texture = ExtResource("1_m2gmi")

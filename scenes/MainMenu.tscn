@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://bd4yjgsvfnvrp"]
+[gd_scene load_steps=24 format=3 uid="uid://bd4yjgsvfnvrp"]
 
 [ext_resource type="Script" uid="uid://kjnkryn7tla0" path="res://Scripts/MainMenuButton.gd" id="1_8yp6e"]
 [ext_resource type="Script" uid="uid://bxep2sdmcwnpp" path="res://Scripts/MainMenuHide.gd" id="1_vx2ul"]
+[ext_resource type="Shader" uid="uid://drxrhnu2owb05" path="res://SUPER.gdshader" id="2_5faoh"]
 [ext_resource type="Script" uid="uid://bcwfehd6uii8n" path="res://Scripts/Load_data.gd" id="2_axqn0"]
 [ext_resource type="Script" uid="uid://c532kty46eg8q" path="res://Scripts/SplashText.gd" id="2_x2scc"]
 [ext_resource type="Script" uid="uid://c3iqy0m4titb1" path="res://Scripts/save_data.gd" id="3_7qsol"]
@@ -9,10 +10,97 @@
 [ext_resource type="Script" uid="uid://etoo21q0kopx" path="res://Scripts/mm_score.gd" id="5_tcicf"]
 [ext_resource type="Script" uid="uid://bm8pwkg03nrfl" path="res://Scripts/Options_Menu.gd" id="6_fqd4w"]
 [ext_resource type="Script" uid="uid://bqrm0tjpq7dyk" path="res://Scripts/Who_is_that.gd" id="6_pdpyb"]
-[ext_resource type="AudioStream" uid="uid://cmpkv8hbeih8y" path="res://Music/Cipher2.mp3" id="10_ec5og"]
 [ext_resource type="Script" uid="uid://dqohqjj8i7hi7" path="res://Scripts/fps_counter.gd" id="10_pc44f"]
 [ext_resource type="PackedScene" uid="uid://dimgct67hwfni" path="res://scenes/Options/options.tscn" id="11_luf5t"]
 [ext_resource type="Script" uid="uid://bb4ufwjh4lseq" path="res://Scripts/discord_manager.gd" id="13_qsiew"]
+
+[sub_resource type="Animation" id="Animation_l4mxc"]
+resource_name = "Background_shift_color"
+length = 11.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3.01, 4.01, 5, 6.04, 7.01, 7.99, 9.00439, 10.0244, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.295356, 0.28661, 0.282844, 1), Color(5.53504e-07, 0.33842, 0.300213, 1), Color(0, 0.35448, 0.0730874, 1), Color(0.307809, 0.300802, 0, 1), Color(0.445041, 0.219506, 1.44392e-07, 1), Color(0.559484, 0, 0.00613171, 1), Color(0.536322, 4.81308e-08, 0.274589, 1), Color(0.477511, 0.00018333, 0.486277, 1), Color(0.406949, 0.00142342, 0.623204, 1), Color(0.125352, 0.189267, 0.603933, 1), Color(8.90419e-07, 0.318477, 0.425038, 1), Color(0.298039, 0.298039, 0.298039, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(11),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"funny_menu_egg"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("egg:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.966667, 1.1, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1164, 606), Vector2(1164, 606), Vector2(-61, 606), Vector2(-61, 606)]
+}
+
+[sub_resource type="Animation" id="Animation_5faoh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.295356, 0.28661, 0.282844, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("egg:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1164, 595)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ptake"]
+_data = {
+&"Background_shift_color": SubResource("Animation_l4mxc"),
+&"RESET": SubResource("Animation_5faoh")
+}
+
+[sub_resource type="Gradient" id="Gradient_5faoh"]
+offsets = PackedFloat32Array(0, 0.0347222)
+colors = PackedColorArray(0, 0, 0, 1, 0.95027, 0, 0.165721, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5faoh"]
+gradient = SubResource("Gradient_5faoh")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ptake"]
+shader = ExtResource("2_5faoh")
+shader_parameter/rotate_90 = true
+shader_parameter/gradient = SubResource("GradientTexture1D_5faoh")
 
 [sub_resource type="Animation" id="Animation_3x3wy"]
 length = 0.001
@@ -140,29 +228,76 @@ grow_vertical = 2
 size_flags_horizontal = 4
 script = ExtResource("1_vx2ul")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.295356, 0.28661, 0.282844, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+libraries = {
+&"": SubResource("AnimationLibrary_ptake")
+}
+autoplay = "Background_shift_color"
+speed_scale = 0.1
+
+[node name="egg" type="RichTextLabel" parent="ColorRect"]
+visible = false
+clip_contents = false
+layout_mode = 0
+offset_left = 1164.0
+offset_top = 595.0
+offset_right = 1218.0
+offset_bottom = 647.0
+theme_override_font_sizes/normal_font_size = 36
+text = "🚴"
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+material = SubResource("ShaderMaterial_ptake")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.390625
+anchor_top = 0.0570988
+anchor_right = 0.627604
+anchor_bottom = 0.243827
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 85
+bbcode_enabled = true
+text = "SUPER"
+metadata/_edit_use_anchors_ = true
+
 [node name="title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -179.0
-offset_top = 48.0
-offset_right = 182.0
-offset_bottom = 152.0
+offset_left = -175.0
+offset_top = 76.0
+offset_right = 188.0
+offset_bottom = 154.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 53
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 38
 text = "Lil-þitch-Suika"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Splash" type="Label" parent="title"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.285319
-anchor_top = 0.740385
-anchor_right = 1.27147
-anchor_bottom = 1.25962
+anchor_left = 0.0948463
+anchor_top = 0.817308
+anchor_right = 1.65164
+anchor_bottom = 1.33654
 pivot_offset = Vector2(280.715, 26.66)
 theme_override_colors/font_color = Color(0.980392, 0.972549, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 18
 text = "this is a bug. report this. like, actually."
 horizontal_alignment = 1
 script = ExtResource("2_x2scc")
@@ -182,13 +317,12 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -302.0
-offset_top = -88.0
+offset_left = -156.0
+offset_top = -38.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
-text = "v0.0.7 - Web
-Development in Progress"
+text = "v1.0 - Web"
 horizontal_alignment = 1
 
 [node name="Play" type="Button" parent="."]
@@ -224,19 +358,18 @@ script = ExtResource("3_fn006")
 metadata/_edit_use_anchors_ = true
 
 [node name="Load" type="Button" parent="."]
-visible = false
 layout_mode = 0
 anchor_left = 0.58073
 anchor_top = 0.50463
 anchor_right = 0.743056
 anchor_bottom = 0.651235
 theme_override_font_sizes/font_size = 39
+disabled = true
 text = "Load"
 script = ExtResource("2_axqn0")
 metadata/_edit_use_anchors_ = true
 
 [node name="Save" type="Button" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.255208
@@ -246,6 +379,7 @@ anchor_bottom = 0.651235
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 39
+disabled = true
 text = "Save"
 script = ExtResource("3_7qsol")
 metadata/_edit_use_anchors_ = true
@@ -275,24 +409,6 @@ theme_override_font_sizes/font_size = 30
 action_mode = 0
 text = "Options"
 script = ExtResource("6_fqd4w")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="OptionsButton"]
-layout_mode = 0
-anchor_left = -2.09625
-anchor_top = -1.77895
-anchor_right = 1.09625
-anchor_bottom = 1.02105
-offset_right = -1.52588e-05
-theme_override_font_sizes/font_size = 20
-text = "Saving and Loading have been disabled in the web build. 
-please set your controls in the options menu before playing.
-sorry!
-
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Who" type="Button" parent="."]
@@ -337,7 +453,6 @@ script = ExtResource("10_pc44f")
 metadata/_edit_use_anchors_ = true
 
 [node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_ec5og")
 volume_db = -8.78
 autoplay = true
 bus = &"Music"
